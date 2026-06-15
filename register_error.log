@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\main.py", line 60, in register_user
+    user = await create_user(db, user_in)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\crud.py", line 11, in create_user
+    hashed_password = get_password_hash(user_in.password)
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\auth.py", line 21, in get_password_hash
+    return pwd_context.hash(password)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\context.py", line 2258, in hash
+    return record.hash(secret, **kwds)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\handlers\argon2.py", line 664, in hash
+    cls._stub_requires_backend()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\utils\handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\utils\handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\utils\handlers.py", line 2176, in set_backend
+    raise default_error
+passlib.exc.MissingBackendError: argon2: no backends available -- recommend you install one (e.g. 'pip install argon2_cffi')

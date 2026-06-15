@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\main.py", line 77, in login_for_access_token
+    user = await authenticate_user(db, form_data.username, form_data.password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\auth.py", line 47, in authenticate_user
+    if not verify_password(password, user.hashed_password):
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\auth.py", line 17, in verify_password
+    return pwd_context.verify(plain_password, hashed_password)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\context.py", line 2343, in verify
+    record = self._get_or_identify_record(hash, scheme, category)
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\context.py", line 2031, in _get_or_identify_record
+    return self._identify_record(hash, category)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\sudai\Desktop\FITNESS_TRACKING_API2\.venv\Lib\site-packages\passlib\context.py", line 1132, in identify_record
+    raise exc.UnknownHashError("hash could not be identified")
+passlib.exc.UnknownHashError: hash could not be identified
